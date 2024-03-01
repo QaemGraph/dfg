@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائم گراف</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'morabba', sans-serif;
+            background-color: #e0edff;
+        }
+       body {
+           animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+        #topBar {
+            height: 40px;
+            background-color: #92031a;
+        }
+       .hover-effect:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+}
+       .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+       .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.5s, opacity 0.5s;
+}
+
+.scroll-reveal.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+        #iconsBar {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            padding: 5px;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-left: 10px;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        #banner {
+            background: url('C:/Users/Aftab Shargh/Desktop/ /html/2بنر سایت.png.png') center/cover no-repeat;
+            height: 300px;
+            position: relative;
+            margin-top: 0px;
+        }
+
+        #banner:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+        }
+
+        #bottomText {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .sampleWork {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #sampleWorksContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+      #bottomText h1 {
+           font-size: 70px; /* یا اندازه دلخواه خودتان */
+           font-weight: ExtraBold;
+           margin-top: 0;
+}
+      #bottomText h3 {
+           font-size: 30px; /* اندازه دلخواه خودتان */
+           font-weight: 500; /* یا هر مقدار دیگری مانند normal */
+           color: ; /* یا هر رنگ دیگری که دوست دارید */
+}
+     #bottomText h2 {
+           font-size: 40px; /* اندازه دلخواه خودتان */
+           font-weight: 700; /* یا هر مقدار دیگری مانند normal */
+           color: #000000; /* یا هر رنگ دیگری که دوست دارید */
+}
+
+    
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center; /* اضافه شده برای وسط چین کردن پاورقی */
+            background-color: #e0edff;
+            padding: 10px;
+            border-top: 1px solid #ccc; 
+        }
+          #sampleWorksTitle {
+              text-align: right;
+              margin-top: 20px;
+}
+
+
+           /* استایل تصویر */
+         #customImage img {
+             transition: transform 0.1s ease;
+}
+
+          /* حالت تصویر در هنگام هوور */
+         #customImage:hover img {
+             transform: scale(1.1);
+}
+        /* حالت تصویر در هنگام فوکوس (برای موارد مثل tab کردن بر روی المان) */
+        #customImage:focus img {
+             transform: scale(1.1);
+}
+
+
+
+         #sampleWorksTitle h2 {
+             font-size: 40px; /* یا اندازه دلخواه خودتان */
+             color: #92031a; /* یا هر رنگ دیگری که دوست دارید */
+}
+  
+
+        #socialMedia,
+        #contactInfo,
+        #copyrightFooter {
+            flex: 1; /* افزوده شده برای تساوی عرض اجزا */
+        }
+
+        #socialMedia a,
+        #contactInfo p,
+        #copyrightFooter p {
+            margin: 10px;
+            color: #333;
+        }
+
+
+       #socialMedia {
+           display: flex;
+           align-items: center;
+}
+
+      #socialMedia a {
+           margin: 0 auto;
+           display: flex;
+           align-items: center;
+}
+
+      #socialMedia img {
+           margin-right: 5px; /* فاصله‌ی بین آیکون و متن */
+}
+
+
+        #socialMedia a:hover,
+        #contactInfo p:hover,
+        #copyrightFooter p:hover {
+            color: #92031a;
+        }
+        <head>
+            <script src="https://unpkg.com/scrollreveal"></script>
+
+
+        #sampleWorksBtn {
+            background: url('C:/Users/Aftab Shargh/Desktop/ /html/your-sample-works-image.jpg') center/cover no-repeat;
+            width: 250px;
+            height: 150px;
+            color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #sampleWorksBtn:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+        }
+
+
+      
+
+    </style>
+</head>
+<body>
+     
+
+    <div id="topBar"></div>
+
+    <div id="iconsBar">
+        <a id="emailIcon" class="icon" href="mailto:qaem.qaemi.2022@gmail.com"><img src="C:/Users/Aftab Shargh/Desktop/ /html/Checlk Alt Square.png.png"></a>
+        <a id="appIcon" class="icon" href="https://harfeto.timefriend.net/17091079546501"><img src="C:/Users/Aftab Shargh/Desktop/ /html/ناشناس.png"></a>
+        <a id="rubikaIcon" class="icon" href="https://rubika.ir/QaemGraph"><img src="C:/Users/Aftab Shargh/Desktop/ /html/minimal.png.png" alt="Rubika Icon"></a>
+        <a id="contactIcon" class="icon" href="tel:+09156045863"><img src="C:/Users/Aftab Shargh/Desktop/ /html/تلفن.png"></a>
+    </div>
+
+    <div id="banner"></div>
+
+    <!-- افزوده شده: بخش نمونه کارها -->
+    <div id="bottomText">
+        <h1 style="text-align: center; color: #92031a">قائم گراف</h1>
+        <h3 style="text-align:right; color: #34383E;">
+            رسانه گرافیکی قائــــــم گراف یک واحد خلاقانه و متخــــــصص در طراحــــــــــــی گرافیـــــــــک و خدمات مرتبط با طراحی گرافیک و هویت بصری است. این رسانه با هدف ارائـــه خدمات طراحی حرفـــه‌ای و جــذاب در زمینه‌های مختلــــــــــف به کاربران خود مـــــــــــی‌پردازد؛
+        </h3>
+
+        <h2 style="text-align: right; color: #92031a">طراحی گرافیــک</h2>
+        <h3 style="text-align: right; color: #34383E;">
+            طراحی مواد چاپی مانند بروشورها، پوسترها و کاتالوگ‌ ها، طراحی لوگو و لوگوتایپ، طراحی حرفه ای پوســتر، تصویر سازی، طراحی بنر تبلیغاتی، طراحی کارت ویزیت، طراحی بسته بنــــــــدی محصول، طـــراحی فتـــــومـونتاژ
+        </h3>
+<!-- تصویر به عنوان عنصر قابل کلیک -->
+       <div id="customImage" onclick="window.location.href='https://rubika.ir/QaemGraph'">
+          <img src="C:/Users/Aftab Shargh/Desktop/ /html/کلید سفارش2.jpg" alt="Custom Image">
+      
+
+    </div>
+     <!-- خط افقی -->
+        <hr style="width: 90%; margin-top: 30px; border-color:#92031a ;">
+
+
+        <div id="sampleWorksTitle">
+            <h2 style="text-align: center; color: #92031a;">نمونه کارها</h2>
+        </div>
+
+    <div id="sampleWorksContainer">
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت2.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت3.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت4.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت5.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت6.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت7.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت8.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت9.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت10.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت11.jpg');"></div>
+        <div class="sampleWork" style="background-image: url('C:/Users/Aftab Shargh/Desktop/ /html/بنر سایت 12.jpg');"></div>
+        
+        
+       
+        <!-- مثال برای ادامه دادن -->
+    </div>
+
+<!-- افزوده شده: بخش نمونه کارهای بیشتر -->
+        <div id="moreSampleWorks">
+           
+
+           <div id="sampleWorksContainer">
+        <!-- نمونه کارها ... -->
+
+        <!-- آیکون جهت مشاهده نمونه کارهای بیشتر -->
+        <a href="https://rubika.ir/QaemGraph" class="hover-effect" style="text-align: center; display: block;">
+            <i class="fas fa-chevron-circle-down" style="font-size: 80px; font-weight:700; color: #92031a;"></i>
+            
+        </a>
+    </div>
+</div>
+
+
+    <!-- افزوده شده: بخش پاورقی -->
+    <footer>
+        <div id="socialMedia">
+            <a href="https://rubika.ir/QaemGraph">
+                <img src="C:/Users/Aftab Shargh/Desktop/ /html/minimal.png.png" alt="Rubika Icon">
+                @QaemGraph
+            </a>
+        </div>
+        
+
+
+        <div id="contactInfo">
+            <p><i class="fas fa-phone-alt"></i> +09156045863</p>
+            <p><i class="far fa-envelope"></i> qaem.qaemi.2022@gmail.com</p>
+        </div>
+
+        <div id="copyrightFooter">
+            <p>&copy; تمامی حقوق برای قائم گراف محفوظ است </p>
+        <sup>طراح سایت: قائم قائمی</sup>
+        </div>
+
+       <script>
+            ScrollReveal().reveal('.scroll-reveal', { delay: 300 });
+       </script>
+      
+    
+</body>
+</html>
+      
+
+
+        </div>
+    </footer>
+</body>
+</html>
+
+
